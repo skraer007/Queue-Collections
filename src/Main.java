@@ -9,9 +9,9 @@ public class Main {
         while (!deque.isEmpty()) {
             Person deletedClient = deque.poll();
             deletedClient.setTickets(1);
-            System.out.println("Клиент " + deletedClient.name + " " + deletedClient.surname +
-                    " прокатился на аттракционе!\nОстаток билетов: " + deletedClient.tickets);
-            if (deletedClient.tickets > 0) {
+            System.out.println("Клиент " + deletedClient.getName() + " " + deletedClient.getSurname() +
+                    " прокатился на аттракционе!\nОстаток билетов: " + deletedClient.getTickets());
+            if (deletedClient.getTickets() > 0) {
                 deque.offer(deletedClient);
             }
         }
